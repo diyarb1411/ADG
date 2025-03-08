@@ -4,7 +4,6 @@ const IMG_PATH = "https://image.tmdb.org/t/p/w500";
 const moviesContainer = document.getElementById("movies-container");
 const searchInput = document.getElementById("search");
 
-// Fetch trending movies initially
 fetchMovies(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
 
 async function fetchMovies(url) {
@@ -18,7 +17,7 @@ async function fetchMovies(url) {
 }
 
 function displayMovies(movies) {
-    moviesContainer.innerHTML = ""; // Clear previous results
+    moviesContainer.innerHTML = "";
 
     movies.forEach(movie => {
         const movieCard = document.createElement("div");
@@ -34,7 +33,7 @@ function displayMovies(movies) {
     });
 }
 
-// Search movies when typing
+
 searchInput.addEventListener("keyup", () => {
     const query = searchInput.value;
     if (query.length > 2) {
