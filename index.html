@@ -10,12 +10,22 @@
     <header>
         <h1>MovieVault 🎬</h1>
         <input type="text" id="search" placeholder="Search for movies...">
+        <select id="genre-filter">
+            <option value="">All Genres</option>
+            <option value="28">Action</option>
+            <option value="35">Comedy</option>
+            <option value="18">Drama</option>
+            <option value="878">Sci-Fi</option>
+        </select>
     </header>
 
     <main>
         <section id="movies-container"></section>
+        <h2>Bookmarked Movies</h2>
+        <section id="bookmarked-movies"></section>
     </main>
 
     <script src="script.js"></script>
 </body>
 </html>
+
